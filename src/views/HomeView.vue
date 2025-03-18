@@ -132,18 +132,6 @@ body
     box-shadow: 10px 10px 5px 10px;
 }
 
-/* footer */
-footer
-{
-    padding-top:80px;
-    color:white;
-    font-weight: 100;
-    text-align:center;
-    font-family: "Inknut Antiqua";
-    display:flex;
-    justify-content:space-between;
-}
-
 .location
 {
     width: 50%;

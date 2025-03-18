@@ -19,3 +19,16 @@
     </div>
   </footer>
 </template>
+
+<style>
+footer
+{
+    padding-top:80px;
+    color:white;
+    font-weight: 100;
+    text-align:center;
+    font-family: "Inknut Antiqua";
+    display:flex;
+    justify-content:space-between;
+}
+</style>
