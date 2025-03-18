@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <!-- Hero Image Carousel -->
   <div class = "hero-image">
