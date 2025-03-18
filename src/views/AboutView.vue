@@ -1,3 +1,14 @@
+<script setup lang="ts">
+</script>
+
+<template>
+  <!-- Mission -->
+  <h1>Our Mission</h1>
+  <p>Deeper description on methods and vegetarianism</p>
+  <p>Will scan and embed documentation in here</p>
+</template>
+
+<style>
 body,html
 {
     background-color: #B60;
@@ -40,3 +51,4 @@ body
     padding: 20px 15px;
     margin-left: 20px;
 }
+</style>

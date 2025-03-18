@@ -1,3 +1,12 @@
+<script setup lang="ts">
+</script>
+
+<template>
+  <h1>Contact us</h1>
+  <p>Make a fake form here probably</p>
+</template>
+
+<style>
 body,html
 {
     background-color: #B60;
@@ -40,3 +49,4 @@ body
     padding: 20px 15px;
     margin-left: 20px;
 }
+</style>
