@@ -7,10 +7,3 @@
   <p>Deeper description on methods and vegetarianism</p>
   <p>Will scan and embed documentation in here</p>
 </template>
-
-<style>
-body
-{
-    margin:0px;
-}
-</style>

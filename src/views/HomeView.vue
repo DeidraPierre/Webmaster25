@@ -46,7 +46,6 @@
 <style>
 body
 {
-    margin:0px;
     font-family: "Inknut Antiqua";
 }
 

@@ -5,10 +5,3 @@
   <h1>Contact us</h1>
   <p>Make a fake form here probably</p>
 </template>
-
-<style>
-body
-{
-    margin:0px;
-}
-</style>
