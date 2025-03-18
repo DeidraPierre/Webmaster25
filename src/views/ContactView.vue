@@ -7,11 +7,6 @@
 </template>
 
 <style>
-body,html
-{
-    background-color: #B60;
-}
-
 body
 {
     margin:0px;
