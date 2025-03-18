@@ -1,47 +1,91 @@
 <!DOCTYPE html>
 <html lang = "en">
+    <link rel="stylesheet" href="./stylePages/index.css">
     <head>
         <title>Elemental</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
     <body>
         <!-- Vue -->
         <div id = "app"></div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
         <!-- Navigation Bar -->
         <div class = "navbar">
+            <div class = "logo-image">
+                <a href = "./index.html"><img id = "logo" src="images\logo1.png"/></a>
+                <a href = "./index.html"><img id = "logo2" src = "images\logo2.png"/></a>
+            </div>
             <div class = "buttons">
                 <a href = "./menu.html">Menu</a>
                 <a href = "./contact.html">Contact Us</a>
                 <a href = "./about.html">About Us</a>
-                <a href = "./order.html">Order Carryout</a>
+                <a href = "./order.html">Order</a>
             </div>
         </div>
-        <h1>Elemental Restaurant</h1>
-        <button>Learn More</button>
-        <!-- Section 2 -->
-         <h3>Restaurant Description</h3>
-         <p>Describing things blah blah blah; This is where we talk about our vegetarian methods</p>
-         <button>View Menu</button>
-         <button>Order Carryout</button>
-         <h3>Reviews</h3>
-         <P>awesome #1</P>
-         <p>awesome #2</p>
-         <p>awesome #3</p>
+        <!-- Hero Image Carousel -->
+         <div class = "hero-image">
+            <img style = "width: 1000px;"src = "images\image.png">
+         </div>
+        <!-- Information Section -->
+         <div class = "info">
+            <h3>An Unforgettable Experience Awaits</h3>
+            <p id = "descript">Every dish is a unique celebration of the four elements, blending fire, water, earth, and air to create flavors that ignite the senses. The experience is truly transformative, where each bite feels like a journey through nature's most powerful forces, leaving you both satisfied and inspired.</p>
+            <h3>Customer Reviews</h3>
+            <!-- Reviews -->
+            <div class = "container">
+                <div class = "review1">
+                    <p>"Elemental Eatery redefines fine dining! Each dish is an artful blend of flavors and textures. Truly a next-level vegan experience!" </p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <div class = "review1">
+                    <p>"A luxurious dining experience with impeccable service and exquisite plant-based dishes. Every bite was a delight. Worth every penny!"</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <div class = "review1">
+                    <p>"The perfect spot for a special occasion! From the ambiance to the innovative menu, Elemental Eatery takes vegan cuisine to a new level."</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>   
+            </div>
+         </div>  
     </body>
+
+
     <footer>
-        <h1>Located, State</h1>
-        <h4>Phone Number</h4>
-        <h2>Hours of Operation</h2>
-        <ul>
-            <li>Sunday</li>
-            <li>Monday</li>
-            <li>Tuesday</li>
-            <li>Wednesday</li>
-            <li>Thursday</li>
-            <li>Friday</li>
-            <li>Saturday</li>
-        </ul>
+        <div class = "location">
+            <h1>Kansas City, MO</h1>
+            <h4>Phone: 888-888-8888</h4>
+            <h4>Address: 1234 Sesame Street, Kansas City, MO</h4>
+        </div>
+        <div class = "hours">
+            <h2 style = "text-decoration: underline;">Hours of Operation</h2>
+            <ul>
+                <li>Sunday: 11am - 9pm</li>
+                <li>Monday: 12pm - 10pm</li>
+                <li>Tuesday: 12pm - 10pm</li>
+                <li>Wednesday: 12pm - 10pm</li>
+                <li>Thursday: 12pm - 10pm</li>
+                <li>Friday 12pm - 10pm</li>
+                <li>Saturday 11am - 10pm</li>
+            </ul>
+        </div>
     </footer>
 </html>
