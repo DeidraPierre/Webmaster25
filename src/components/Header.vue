@@ -20,3 +20,21 @@ import { RouterLink } from 'vue-router'
     </div>
   </div>
 </template>
+
+<style>
+.navbar
+{
+    background-color:#FFECB3;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-image
+{
+    display:block;
+    overflow: visible;
+    float:left;
+    padding-top:10px;
+    padding-left:10px;
+}
+</style>
