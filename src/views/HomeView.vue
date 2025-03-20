@@ -1,11 +1,22 @@
+<script setup lang="ts">
+import { useTemplateRef } from 'vue';
+
+const info = useTemplateRef<HTMLDivElement>('info');
+
+function scrollToInfo() {
+    info.value?.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
 <template>
   <!-- Hero Image Carousel -->
-  <div class = "hero-image">
-    <img style = "width: 1000px;" src = "@/assets/image.png">
+  <div class = "hero-section">
+    <img id = "hero-image" src = "@/assets/image.png">
+    <button id = "content-arrow" class = "fa fa-arrow-down" @click = "scrollToInfo()"></button>
   </div>
 
   <!-- Information Section -->
-  <div class = "info">
+  <div class = "info" ref = "info">
     <h3>An Unforgettable Experience Awaits</h3>
     <p id = "descript">Every dish is a unique celebration of the four elements, blending fire, water, earth, and air to create flavors that ignite the senses. The experience is truly transformative, where each bite feels like a journey through nature's most powerful forces, leaving you both satisfied and inspired.</p>
     <h3>Customer Reviews</h3>
@@ -47,11 +58,46 @@ body
 }
 
 /* hero-image */
-.hero-image
+.hero-section
 {
-    text-align: center;
-    margin-top:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 15px;
+    height: 950px;
 }
+
+#hero-image
+{
+  width: 1400px;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+#content-arrow
+{
+  font-size: 48px;
+  animation: 0.5s ease-in-out 0s infinite alternate bouncing;
+
+  /* properties to negate change in styling from the <button> tag */
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .info
 {
     background-color: #FFECB3;
