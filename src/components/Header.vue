@@ -38,7 +38,7 @@ import { RouterLink } from 'vue-router'
     padding-left:10px;
 }
 
-.buttons RouterLink
+.buttons a
 {
     float:left;
     display:block;
@@ -55,6 +55,6 @@ import { RouterLink } from 'vue-router'
 }
 
 .buttons a:hover{
-    color:rgba(209, 143, 21, 0.342);
+    color:rgba(209, 115, 21, 0.342);
 }
 </style>
