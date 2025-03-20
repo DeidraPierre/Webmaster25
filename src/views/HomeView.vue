@@ -33,12 +33,12 @@ function decrementCarouselIndex() {
     <!-- Hero Image Carousel -->
     <div class = "hero-section">
       <div id = "hero-image-container">
-        <button id = "hero-image-left-arrow" @click = "decrementCarouselIndex()"></button>
+        <button class = "hero-image-arrow fa fa-arrow-left" @click = "decrementCarouselIndex()"></button>
         <Transition>
           <img v-if = "carouselIndex == 0" id = "hero-image" src = "@/assets/hero-fire.png">
           <img v-else-if = "carouselIndex == 1" id = "hero-image" src = "@/assets/hero-water.jpeg">
         </Transition>
-        <button id = "hero-image-right-arrow" @click = "incrementCarouselIndex()"></button>
+        <button class = "hero-image-arrow fa fa-arrow-right" @click = "incrementCarouselIndex()"></button>
       </div>
       <button id = "content-arrow" class = "fa fa-arrow-down" @click = "scrollToInfo()"></button>
     </div>
@@ -107,6 +107,30 @@ body
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  gap: 20px;
+}
+
+.hero-image-arrow {
+  /* properties to negate change in styling from the <button> tag */
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+
+  font-size: 48px;
+}
+
+.hero-image-arrow:hover {
+  /* properties to negate change in styling from the <button> tag */
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
 }
 
 #hero-image
