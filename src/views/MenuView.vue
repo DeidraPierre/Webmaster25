@@ -10,7 +10,8 @@ to showcase our commitment to the planet.</p>
   <button type = "button">Lunch Menu</button>
   <button type = "button">Dinner Menu</button>
 </div><br>
-<iframe src="https://drive.google.com/file/d/1Lr3ewwfPO9Vi0p_rDm6cxGpLa8BALuQu/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="src\assets\lunch_vegan.pdf" width="640" height="480" allow="autoplay"></iframe>
+<iframe src = "src\assets\vegannnnnnnnn.pdf" width = "640" height = "480" allow = "autoplay"></iframe>
 </template>
 
 
