@@ -1,12 +1,21 @@
+<script setup lang="ts">
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+</script>
+
 <template>
-  <!-- Mission -->
-  <h1 id = "mission">Our Mission</h1>
-  <p id = "descrip1">Elemental Eatery was born from a desire to merge the beauty of nature with a transformative dining experience. Inspired by the four classical elements—Fire, Water, Earth, and Air—our founders envisioned a space where culinary artistry would meet environmental consciousness. </p>
-  <p id = "descrip2">As a fully vegan restaurant, we are committed to showing that plant-based dining can be bold, creative, and deeply satisfying. Every dish is crafted using fresh, organic ingredients without compromising on flavor or texture.</p>
-  <br><div class = "green">
-    <h2>Our Commitment to Sustainability</h2>
-    <p>At Elemental Eatery, we believe in protecting the planet as fiercely as we pursue culinary excellence. Our sustainability efforts are woven into every aspect of our operation.</p>
-  </div>
+  <header>
+    <nav>
+      <Header color="#FFECB3" />
+    </nav>
+  </header>
+  <body>
+    <!-- Mission -->
+    <h1>Our Mission</h1>
+    <p>Deeper description on methods and vegetarianism</p>
+    <p>Will scan and embed documentation in here</p>
+  </body>
+  <Footer color="#B60" />
 </template>
 
 <style>

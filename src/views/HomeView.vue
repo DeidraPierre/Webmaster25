@@ -1,59 +1,90 @@
 <script setup lang="ts">
-import { useTemplateRef } from 'vue';
+import { ref, useTemplateRef } from 'vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 
+// scrolling
 const info = useTemplateRef<HTMLDivElement>('info');
 
 function scrollToInfo() {
     info.value?.scrollIntoView({ behavior: 'smooth' });
 }
+
+// hero carousel
+const carouselIndex = ref(0);
+
+function incrementCarouselIndex() {
+    carouselIndex.value = (carouselIndex.value + 1) % 2;
+}
+
+function decrementCarouselIndex() {
+    carouselIndex.value = (carouselIndex.value - 1 + 2) % 2;
+}
+
 </script>
 
 <template>
-  <!-- Hero Image Carousel -->
-  <div class = "hero-section">
-    <img id = "hero-image" src = "@/assets/image.png">
-    <button id = "content-arrow" class = "fa fa-arrow-down" @click = "scrollToInfo()"></button>
-  </div>
-
-  <!-- Information Section -->
-  <div class = "info" ref = "info">
-    <h3>An Unforgettable Experience Awaits</h3>
-    <p id = "descript">Every dish is a unique celebration of the four elements, blending fire, water, earth, and air to create flavors that ignite the senses. The experience is truly transformative, where each bite feels like a journey through nature's most powerful forces, leaving you both satisfied and inspired.</p>
-    <h3>Customer Reviews</h3>
-
-    <!-- Reviews -->
-    <div class = "container">
-      <div class = "review1">
-        <p>"Elemental Eatery redefines fine dining! Each dish is an artful blend of flavors and textures. Truly a next-level vegan experience!" </p>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
+  <header>
+    <nav>
+      <Header color="#FFECB3" />
+    </nav>
+  </header>
+  <body>
+    <!-- Hero Image Carousel -->
+    <div class = "hero-section">
+      <div id = "hero-image-container">
+        <button id = "hero-image-left-arrow" @click = "decrementCarouselIndex()"></button>
+        <Transition>
+          <img v-if = "carouselIndex == 0" id = "hero-image" src = "@/assets/hero-fire.png">
+          <img v-else-if = "carouselIndex == 1" id = "hero-image" src = "@/assets/hero-water.jpeg">
+        </Transition>
+        <button id = "hero-image-right-arrow" @click = "incrementCarouselIndex()"></button>
       </div>
-      <div class = "review1">
-        <p>"A luxurious dining experience with impeccable service and exquisite plant-based dishes. Every bite was a delight. Worth every penny!"</p>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </div>
-      <div class = "review1">
-        <p>"The perfect spot for a special occasion! From the ambiance to the innovative menu, Elemental Eatery takes vegan cuisine to a new level."</p>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
+      <button id = "content-arrow" class = "fa fa-arrow-down" @click = "scrollToInfo()"></button>
+    </div>
+
+    <!-- Information Section -->
+    <div class = "info" ref = "info">
+      <h3>An Unforgettable Experience Awaits</h3>
+      <p id = "descript">Every dish is a unique celebration of the four elements, blending fire, water, earth, and air to create flavors that ignite the senses. The experience is truly transformative, where each bite feels like a journey through nature's most powerful forces, leaving you both satisfied and inspired.</p>
+      <h3>Customer Reviews</h3>
+
+      <!-- Reviews -->
+      <div class = "container">
+        <div class = "review1">
+          <p>"Elemental Eatery redefines fine dining! Each dish is an artful blend of flavors and textures. Truly a next-level vegan experience!" </p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+        <div class = "review1">
+          <p>"A luxurious dining experience with impeccable service and exquisite plant-based dishes. Every bite was a delight. Worth every penny!"</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+        <div class = "review1">
+          <p>"The perfect spot for a special occasion! From the ambiance to the innovative menu, Elemental Eatery takes vegan cuisine to a new level."</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
       </div>
     </div>
-  </div>
+  </body>
+  <Footer color="#B60" />
 </template>
 
 <style>
 body
 {
+    background-color: #B60;
     font-family: "Inknut Antiqua";
 }
 
@@ -67,6 +98,15 @@ body
 
     margin-top: 15px;
     height: 950px;
+}
+
+#hero-image-container
+{
+  width: 1500px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #hero-image
