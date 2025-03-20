@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const props = defineProps<{
+  color: string
+}>()
+
+const color = props.color;
+</script>
+
 <template>
   <!-- TO-DO: Figure out how to change body color on certain pages so the footer is clearly seperated from the body -->
   <footer>
@@ -24,6 +32,8 @@
 <style>
 footer
 {
+    background-color: v-bind(color);
+
     padding-top:80px;
     color:white;
     font-weight: 100;

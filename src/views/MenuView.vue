@@ -1,19 +1,33 @@
-<template>
-  <!-- TO-DO: Make it so the buttons alternate which pdf shows up -->
-  <!-- Menu Buttons -->
-  <h1 id = "menus">Our Menus</h1>
-  <hr>
-  <p id = "menud">Take a look at our incredible cuisine and healthy vegan options! Each menu is divided into sections of their most dominant elements 
-to showcase our commitment to the planet.</p>
-<hr>
-<div class = "button-container">
-  <button type = "button">Lunch Menu</button>
-  <button type = "button">Dinner Menu</button>
-</div><br>
-<iframe src="src\assets\lunch_vegan.pdf" width="640" height="480" allow="autoplay"></iframe>
-<iframe src = "src\assets\vegannnnnnnnn.pdf" width = "640" height = "480" allow = "autoplay"></iframe>
-</template>
+<script setup lang="ts">
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+</script>
 
+<template>
+  <header>
+    <nav>
+      <Header color="#FFECB3" />
+    </nav>
+  </header>
+  <body>
+    <!-- TO-DO: Make it so the buttons alternate which pdf shows up -->
+    <!-- Menu Buttons -->
+    <h1 id = "menus">Our Menus</h1>
+    <hr>
+    <p id = "menud">
+      Take a look at our incredible cuisine and healthy vegan options! Each menu is divided into sections of their most dominant elements
+      to showcase our commitment to the planet.
+    </p>
+    <hr>
+    <div class = "button-container">
+      <button type = "button">Lunch Menu</button>
+      <button type = "button">Dinner Menu</button>
+    </div>
+    <br>
+    <iframe src="https://drive.google.com/file/d/1Lr3ewwfPO9Vi0p_rDm6cxGpLa8BALuQu/preview" width="640" height="480" allow="autoplay"></iframe>
+  </body>
+  <Footer color="#B60" />
+</template>
 
 <style>
 #menus{

@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+
+const props = defineProps<{
+  color: string
+}>()
+
+const color = props.color;
 </script>
 
 <template>
@@ -24,7 +30,7 @@ import { RouterLink } from 'vue-router'
 <style>
 .navbar
 {
-    background-color:#FFECB3;
+    background-color: v-bind(color);
     position: relative;
     overflow: hidden;
 }

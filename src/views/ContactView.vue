@@ -1,15 +1,31 @@
+<script setup lang="ts">
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+</script>
+
 <template>
-  <h1 id = "contact">Contact</h1>
-  <p id = "contactd">Take a moment to let us know how we’re doing or make reservations. We are open to any feedback or consultations.</p>
-  <form>
-    <label for = "name">Name</label><br>
-    <input type = "text" id = "name" placeholder = "Your Name" name = "name"><br>
-    <label for = "email">Email</label><br>
-    <input type = "email" id = "email" placeholder = "Email Address" name = "email"><br>
-    <label for = "content">Message</label><br>
-    <input type = "text" id = "content" placeholder = "Enter your message" name = "content"><br>
-    <input type = "submit" value = "Submit" id = "submit">
-  </form>
+  <header>
+    <nav>
+      <Header color="#FFECB3" />
+    </nav>
+  </header>
+  <body>
+    <h1 id="contact">Contact</h1>
+    <p id="contactd">
+      Take a moment to let us know how we’re doing or make reservations. We are open to any feedback
+      or consultations.
+    </p>
+    <form>
+      <label for = "name">Name</label><br/>
+      <input type = "text" id="name" placeholder = "Your Name" name = "name"/><br />
+      <label for = "email">Email</label><br />
+      <input type = "email" id="email" placeholder="Email Address" name="email" /><br />
+      <label for = "content">Message</label><br />
+      <input type = "text" id="content" placeholder="Enter your message" name="content" /><br />
+      <input type = "submit" value="Submit" id="submit" />
+    </form>
+  </body>
+  <Footer color="#B60" />
 </template>
 
 
@@ -55,5 +71,4 @@ label
   margin-top:20px;
   margin-bottom: 20px;
 }
-
 </style>
