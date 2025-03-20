@@ -2,6 +2,7 @@
   <!-- Hero Image Carousel -->
   <div class = "hero-image">
     <img style = "width: 1000px;" src = "@/assets/image.png">
+    <span id = "content-arrow" class="fa fa-arrow-down"></span>
   </div>
 
   <!-- Information Section -->
@@ -49,9 +50,30 @@ body
 /* hero-image */
 .hero-image
 {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
     margin-top:15px;
 }
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+#content-arrow
+{
+  font-size: 48px;
+  animation: 0.5s ease-in-out 0s infinite alternate bouncing;
+}
+
 .info
 {
     background-color: #FFECB3;
