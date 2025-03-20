@@ -1,12 +1,22 @@
+<script setup lang="ts">
+import { useTemplateRef } from 'vue';
+
+const info = useTemplateRef<HTMLDivElement>('info');
+
+function scrollToInfo() {
+    info.value?.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
 <template>
   <!-- Hero Image Carousel -->
   <div class = "hero-section">
     <img id = "hero-image" src = "@/assets/image.png">
-    <span id = "content-arrow" class = "fa fa-arrow-down"></span>
+    <button id = "content-arrow" class = "fa fa-arrow-down" @click = "scrollToInfo()"></button>
   </div>
 
   <!-- Information Section -->
-  <div class = "info">
+  <div class = "info" ref = "info">
     <h3>An Unforgettable Experience Awaits</h3>
     <p id = "descript">Every dish is a unique celebration of the four elements, blending fire, water, earth, and air to create flavors that ignite the senses. The experience is truly transformative, where each bite feels like a journey through nature's most powerful forces, leaving you both satisfied and inspired.</p>
     <h3>Customer Reviews</h3>
@@ -78,6 +88,14 @@ body
 {
   font-size: 48px;
   animation: 0.5s ease-in-out 0s infinite alternate bouncing;
+
+  /* properties to negate change in styling from the <button> tag */
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .info
