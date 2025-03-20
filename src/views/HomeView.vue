@@ -1,8 +1,8 @@
 <template>
   <!-- Hero Image Carousel -->
-  <div class = "hero-image">
-    <img style = "width: 1000px;" src = "@/assets/image.png">
-    <span id = "content-arrow" class="fa fa-arrow-down"></span>
+  <div class = "hero-section">
+    <img id = "hero-image" src = "@/assets/image.png">
+    <span id = "content-arrow" class = "fa fa-arrow-down"></span>
   </div>
 
   <!-- Information Section -->
@@ -48,14 +48,20 @@ body
 }
 
 /* hero-image */
-.hero-image
+.hero-section
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 
-    margin-top:15px;
+    margin-top: 15px;
+    height: 950px;
+}
+
+#hero-image
+{
+  width: 1400px;
 }
 
 @keyframes bouncing {
