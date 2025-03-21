@@ -16,5 +16,5 @@ import Footer from '@/components/Footer.vue'
     <button>Dinner Menu</button>
     <button>Lunch Menu</button>
   </body>
-  <Footer color="#B60" />
+  <Footer color="#CC7711" />
 </template>

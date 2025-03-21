@@ -57,7 +57,7 @@ import Footer from '@/components/Footer.vue'
       </div>
     </div>
   </body>
-  <Footer color="#B60" />
+  <Footer color="#CC7711" />
 </template>
 
 <style>

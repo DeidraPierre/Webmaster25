@@ -24,8 +24,8 @@ import Footer from '@/components/Footer.vue'
       <input type = "text" id="content" placeholder="Enter your message" name="content" /><br />
       <input type = "submit" value="Submit" id="submit" />
     </form>
-  </body>
-  <Footer color="#B60" />
+  </body><br>
+  <Footer color="#CC7711" />
 </template>
 
 

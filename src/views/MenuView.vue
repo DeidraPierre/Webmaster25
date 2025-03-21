@@ -26,7 +26,7 @@ import Footer from '@/components/Footer.vue'
     <br>
     <iframe src="https://drive.google.com/file/d/1Lr3ewwfPO9Vi0p_rDm6cxGpLa8BALuQu/preview" width="640" height="480" allow="autoplay"></iframe>
   </body>
-  <Footer color="#B60" />
+  <Footer color="#CC7711" />
 </template>
 
 <style>

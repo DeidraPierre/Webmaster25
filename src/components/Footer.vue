@@ -7,7 +7,6 @@ const color = props.color;
 </script>
 
 <template>
-  <!-- TO-DO: Figure out how to change body color on certain pages so the footer is clearly seperated from the body -->
   <footer>
     <div class = "location">
       <h1>Kansas City, MO</h1>
