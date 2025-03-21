@@ -10,7 +10,6 @@ import Footer from '@/components/Footer.vue'
     </nav>
   </header>
   <body>
-    <!-- TO-DO: Change photos to stock photos that Raymond Found and upload documentation -->
     <!-- Mission -->
     <h1 id = "mission">Our Mission</h1>
     <p id = "descrip1">Elemental Eatery was born from a desire to merge the beauty of nature with a transformative dining experience. Inspired by the four classical elements—Fire, Water, Earth, and Air—our founders envisioned a space where culinary artistry would meet environmental consciousness. </p>

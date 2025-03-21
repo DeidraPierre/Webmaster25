@@ -21,7 +21,6 @@ function setMenuIndex(index: number) {
     </nav>
   </header>
   <body>
-    <!-- TO-DO: Make it so the buttons alternate which pdf shows up -->
     <!-- Menu Buttons -->
     <h1 id = "menus">Our Menus</h1>
     <hr>
