@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import { ref } from 'vue';
+
+import lunchPdf from '@/assets/lunch_vegan.pdf';
+import dinnerPdf from '@/assets/vegannnnnnnnn.pdf';
+
+// menu choice
+const menuIndex = ref(0);
+
+function setMenuIndex(index: number) {
+    menuIndex.value = index;
+}
 </script>
 
 <template>
@@ -20,11 +31,20 @@ import Footer from '@/components/Footer.vue'
     </p>
     <hr>
     <div class = "button-container">
-      <button type = "button">Lunch Menu</button>
-      <button type = "button">Dinner Menu</button>
+      <button type = "button" @click = "setMenuIndex(0)">Lunch Menu</button>
+      <button type = "button" @click = "setMenuIndex(1)">Dinner Menu</button>
     </div>
     <br>
-    <iframe src="https://drive.google.com/file/d/1Lr3ewwfPO9Vi0p_rDm6cxGpLa8BALuQu/preview" width="640" height="480" allow="autoplay"></iframe>
+    <embed
+      :src="lunchPdf"
+      width="640" height="480" allow="autoplay"
+      v-show = "menuIndex == 0"
+    />
+    <embed
+      :src="dinnerPdf"
+      width="640" height="480" allow="autoplay"
+      v-show = "menuIndex == 1"
+    />
   </body>
   <Footer color="#CC7711" />
 </template>
@@ -66,7 +86,7 @@ button:hover
   background-color: #4a4a4a;
   color: white;
 }
-iframe
+embed
 {
   height: 800px;
   display: flex;
