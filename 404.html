@@ -1,4 +1,11 @@
 <script>
-    location.replace('/Webmaster25' + location.pathname);
-  </script>
+    var path = window.location.pathname;
+    var repoName = "/Webmaster25"; // Change this to match your repo name
+  
+    if (!path.startsWith(repoName)) {
+      path = repoName + path;
+    }
+  
+    window.location.replace(path);
+</script>
   
