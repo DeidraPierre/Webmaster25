@@ -131,4 +131,13 @@ import Footer from '@/components/Footer.vue'
     display: flex;
     padding: 50px;
   }
+  #cite
+  {
+    text-align: center;
+  }
+  .documentation
+  {
+    width: 400px;
+    height: 500px;
+  }
 </style>

@@ -23,6 +23,7 @@ const color = props.color;
       <RouterLink to = "/contact">Contact Us</RouterLink>
       <RouterLink to = "/about">About Us</RouterLink>
       <RouterLink to = "/order">Order</RouterLink>
+      <RouterLink to = "/reference">Reference Page</RouterLink>
     </div>
   </div>
 </template>

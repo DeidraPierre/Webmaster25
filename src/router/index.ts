@@ -4,6 +4,7 @@ import AboutView from '@/views/AboutView.vue'
 import ContactView from '@/views/ContactView.vue';
 import MenuView from '@/views/MenuView.vue';
 import OrderView from '@/views/OrderView.vue';
+import ReferenceView from '@/views/ReferenceView.vue';
 
 // declare our modified meta type
 declare module 'vue-router' {
@@ -46,6 +47,12 @@ const router = createRouter({
       name: 'order',
       meta: { title: 'Order' },
       component: OrderView
+    },
+    {
+      path: '/reference',
+      name: 'reference',
+      meta: { title: 'Reference' },
+      component: ReferenceView
     }
   ],
 })
