@@ -26,7 +26,7 @@ import Footer from '@/components/Footer.vue'
         <p> We partner with local, organic farms to ensure our ingredients are fresh, seasonal, and sourced responsibly.</p>
       </div>
       <div class = "image1">
-        <img src = "@/assets/hero-fire.png">
+        <img src = "@/assets/Farm2Table.png">
       </div>
     </div>
     <div class = "section2">
@@ -35,7 +35,7 @@ import Footer from '@/components/Footer.vue'
         <p>Kitchen scraps are repurposed into flavorful broths, sauces, and pickled garnishes. Any remaining waste is composted to minimize landfill contributions.</p>
       </div>
       <div class = "image2">
-        <img src = "@/assets/hero-fire.png">
+        <img src = "@/assets/ZeroWaste.png">
       </div>
     </div>
     <div class = "section1">
@@ -44,7 +44,7 @@ import Footer from '@/components/Footer.vue'
         <p>From biodegradable takeout containers to rainwater irrigation in our local garden, we strive to align our dining experience with environmentally conscious values.</p>
       </div>
       <div class = "image1">
-        <img src = "@/assets/hero-fire.png">
+        <img src = "@/assets/solar.png">
       </div>
     </div>
     <div class = "section2">
@@ -53,7 +53,7 @@ import Footer from '@/components/Footer.vue'
         <p>We believe positive change starts with community. A portion of our proceeds is donated to a non-profit organization that supports local sustainability projects, food security initiatives, and environmental education.</p>
       </div>
       <div class = "image2">
-        <img src = "@/assets/hero-fire.png">
+        <img src = "@/assets/giving.png">
       </div>
     </div>
   </body>
@@ -115,14 +115,14 @@ import Footer from '@/components/Footer.vue'
   }
   .image1 img
   {
-    max-width: 100%;
+    width: 600px;
     height: auto;
     display: block;
   }
 
   .image2 img
   {
-    max-width: 100%;
+    width: 600px;
     height: auto;
     display: block;
   }
