@@ -11,14 +11,25 @@ function scrollToInfo() {
 }
 
 // hero carousel
+const shiftMagnitude = 1500; // px
+
 const carouselIndex = ref(0);
 
+const transitionShift = ref(`${shiftMagnitude}px`);
+const transitionRevShift = ref(`-${shiftMagnitude}px`);
+
 function incrementCarouselIndex() {
-    carouselIndex.value = (carouselIndex.value + 1) % 2;
+    carouselIndex.value = (carouselIndex.value + 1) % 4;
+
+    transitionShift.value = `${shiftMagnitude}px`;
+    transitionRevShift.value = `-${shiftMagnitude}px`;
 }
 
 function decrementCarouselIndex() {
-    carouselIndex.value = (carouselIndex.value - 1 + 2) % 2;
+    carouselIndex.value = (carouselIndex.value - 1 + 4) % 4;
+
+    transitionShift.value = `-${shiftMagnitude}px`;
+    transitionRevShift.value = `${shiftMagnitude}px`;
 }
 
 </script>
@@ -34,12 +45,15 @@ function decrementCarouselIndex() {
     <div class = "hero-section">
       <div id = "hero-image-container">
         <button class = "hero-image-arrow fa fa-arrow-left" @click = "decrementCarouselIndex()"></button>
-        <Transition>
-          <img v-if = "carouselIndex == 0" id = "hero-image" src = "@/assets/hero-fire.png">
-          <img v-else-if = "carouselIndex == 1" id = "hero-image" src = "@/assets/hero-water.jpeg">
-        </Transition>
         <button class = "hero-image-arrow fa fa-arrow-right" @click = "incrementCarouselIndex()"></button>
       </div>
+      <Transition name="hero" class="hero-transition">
+        <img v-if = "carouselIndex == 0" id = "hero-image" src = "@/assets/hero-fire.png">
+        <img v-else-if = "carouselIndex == 1" id = "hero-image" src = "@/assets/hero-water.jpg">
+        <img v-else-if = "carouselIndex == 2" id = "hero-image" src = "@/assets/hero-air.jpg">
+        <img v-else-if = "carouselIndex == 3" id = "hero-image" src = "@/assets/hero-earth.jpg">
+      </Transition>
+      <span class="hero-text">Dine In The Elements</span>
       <button id = "content-arrow" class = "fa fa-arrow-down" @click = "scrollToInfo()"></button>
     </div>
 
@@ -96,19 +110,51 @@ body
     align-items: center;
     gap: 20px;
 
-    margin-top: 15px;
-    height: 950px;
+    height: 90vh;
 }
 
 #hero-image-container
 {
-  width: 1500px;
+  width: 97vw;
+  height: 80vh;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 
   gap: 20px;
+}
+
+.hero-transition {
+  position: absolute;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 10vh;
+
+  font-size: 128px;
+
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  color: white;
+}
+
+.hero-enter-active,
+.hero-leave-active {
+  transition: all 0.5s ease;
+}
+
+.hero-enter-from {
+  opacity: 0;
+  transform: translateX(v-bind('transitionRevShift'));
+}
+
+.hero-leave-to {
+  opacity: 0;
+  transform: translateX(v-bind('transitionShift'));
 }
 
 .hero-image-arrow {
@@ -135,7 +181,7 @@ body
 
 #hero-image
 {
-  width: 1400px;
+  height: 90vh;
 }
 
 @keyframes bouncing {
