@@ -23,10 +23,15 @@ import Footer from '@/components/Footer.vue'
         <p>-Haych, Jaye. "a group of baby dolls" Unsplash, 20, Jun. 2022</p>
         <p>-Deeyo, Chelsea. "blue solar panel" Unsplash, 21, May 2019</p>
         <p>-Yukawa, Katt. "person showing both hands with make a change note and coins" Unsplash, 26, Jul. 2018</p>
+        <p>-Hojo, Akira. "body of water" Unsplash, 16, Apr. 2019</p>
+        <p>-Kalimero, Pero. "nimbus clouds and blue calm sky" Unsplash, 6, Jul. 2017</p>
+        <p>-Meng, Qingbao. "bird's eye view photograph of green mountains" Unsplash, 4, Aug. 2017</p>
     </div>
     <h3 class = "cite">Font</h3>
-    <a class = "links" href = "https://fonts.google.com/specimen/Inknut+Antiqua/license">Google Fonts license</a>
+    <a class = "links" href = "https://fonts.google.com/specimen/Inknut+Antiqua/license">Google Fonts Inknut Antiqua license</a>
+    <a class = "links" href = "https://fonts.google.com/specimen/Italianno/license">Google Fonts Italianno license</a>
     <p class = "unsplash1">Sorenson, Claus. "Inknut Antiqua." Google Fonts, Google</p>
+    <p class = "unsplash1">Leuschke, Robert. "Italianno." Google Fonts, Google</p>
     <h3 class = "cite">Tools Used</h3>
     <div class = "tool">
         <ul id = "tools">
